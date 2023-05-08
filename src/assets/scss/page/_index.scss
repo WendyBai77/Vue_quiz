@@ -1,0 +1,70 @@
+.banner {
+  height: 400px;
+  max-width: 100%;
+  position: relative;
+  @include w-md-max {
+    height: 350px;
+  }
+  &-dark {
+    background: url('@/assets/img/al-elmes-ULHxWq8reao-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.banner-menu {
+  height: 900px;
+  max-width: 100%;
+  position: relative;
+  @include w-lg-max {
+    height: 700px;
+  }
+  @include w-md-max {
+    height: 500px;
+  }
+  @include w-xxs {
+    height: 260px;
+  }
+  &-light {
+    background: url('@/assets/img/menu.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.banner {
+  &::after {
+    position: absolute;
+    content: '';
+    background: rgba(255, 255, 255, 0.2);
+    height: 180px;
+    width: 100%;
+    top: 30%;
+    @include w-md-max {
+      height: 130px;
+      top: 38%;
+    }
+  }
+}
+
+.banner-content {
+  position: absolute;
+  top: 53%;
+  left: 20%;
+  transform: translateY(-50%);
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2px;
+  }
+  @include w-md-max {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    top: 57%;
+  }
+}

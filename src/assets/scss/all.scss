@@ -1,0 +1,24 @@
+@import 'bootstrap/scss/functions';
+
+// Sass 輔助工具
+@import './helpers/variables';
+@import './helpers/utilities';
+@import './helpers/mixin';
+
+@import "bootstrap/scss/maps";
+
+@import 'bootstrap/scss/bootstrap';
+
+// 預設樣式
+@import './setting/base';
+@import './setting/reset';
+
+@import './page/index';
+@import './page/order';
+
+// 匯入google fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap');
+// 匯入 Bootstrap icon
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css');
+// 匯入 fontAwesome
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');

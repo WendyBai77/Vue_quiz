@@ -68,3 +68,9 @@
     top: 57%;
   }
 }
+
+.router-link{
+  @include w-lg-max{
+    text-align: center;
+  }
+}

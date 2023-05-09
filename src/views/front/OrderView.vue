@@ -3,7 +3,7 @@
     <h1 class="h3">點餐頁面</h1>
 
     <!-- 作為網頁顯示使用 -->
-    <router-view></router-view>
+    <RouterView></RouterView>
     <!-- 菜單元件-->
     <OrderComponent></OrderComponent>
     <!-- 點餐輸入表單元件 -->
@@ -34,7 +34,7 @@
 
       <div class="mb-5 text-center">
         <h3 class="mb-3">目前顯示的值</h3>
-        <ul>
+        <ul class="pb-8">
           <template v-if="textValue">
             <li class="mb-1 text-center">姓名：{{ textValue }}</li>
           </template>
@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import OrderComponent from '@/components/OrderComponent.vue'
-import InputComponent from '@/components/InputComponent.vue'
+import OrderComponent from '@/components/OrderComponent.vue';
+import InputComponent from '@/components/InputComponent.vue';
 
 export default {
   data() {
@@ -71,19 +71,19 @@ export default {
       textValue: '',
       radioValue: '',
       selectValue: 1
-    }
+    };
   },
   components: { OrderComponent, InputComponent },
   methods: {
     showValues() {
-      console.log(`Text Input: ${this.textValue}`)
-      console.log(`Radio Input: ${this.radioValue}`)
-      console.log(`Select Input: ${this.selectValue}`)
+      console.log(`Text Input: ${this.textValue}`);
+      console.log(`Radio Input: ${this.radioValue}`);
+      console.log(`Select Input: ${this.selectValue}`);
     }
   },
   created() {
-    this.$root.color = '#FBF7EC'
-    this.$root.theme = 'light'
+    this.$root.color = '#FBF7EC';
+    this.$root.theme = 'light';
   }
-}
+};
 </script>

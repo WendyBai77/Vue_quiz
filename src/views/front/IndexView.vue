@@ -19,7 +19,7 @@
 
         <div>
           <h3 class="mt-6 mb-3">訂單資訊</h3>
-          <ul>
+          <ul class="pb-8">
             <li v-for="(item, index) in data" :key="index">
               <div class="mb-1">姓名：{{ item.name }}</div>
               <div class="mb-3">城市：{{ item.city }}</div>
@@ -27,14 +27,6 @@
           </ul>
         </div>
       </div>
-    </div>
-
-    <div class="footer">
-      <nav class="navbar">
-        <div class="border-top container-fluid d-flex justify-content-center">
-          <p class="text-gary-300 py-2">雨天不想外出、太熱不想走路，GOGO 一起來訂餐!</p>
-        </div>
-      </nav>
     </div>
   </div>
 </template>
@@ -49,23 +41,23 @@ export default {
           city: ''
         }
       ]
-    }
+    };
   },
   created() {
-    this.$root.color = '#DFE4EB'
-    this.$root.theme = 'dark'
+    this.$root.color = '#DFE4EB';
+    this.$root.theme = 'dark';
   },
   mounted() {
     this.$http
       .get('https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8')
       .then((res) => {
         // console.log(res)
-        this.data = res.data
+        this.data = res.data;
         // console.log(this.data)
       })
       .catch((error) => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   }
-}
+};
 </script>

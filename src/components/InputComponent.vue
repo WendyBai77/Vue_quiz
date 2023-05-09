@@ -71,7 +71,7 @@ export default {
     return {
       //將父元件進來的value，賦值給子元件的inputValue
       inputValue: this.value
-    }
+    };
   },
   props: {
     label: {
@@ -88,14 +88,14 @@ export default {
   },
   watch: {
     value(newValue) {
-      this.inputValue = newValue
+      this.inputValue = newValue;
     }
   },
   methods: {
     handleInput(event) {
-      this.inputValue = event.target.value
-      this.$emit('input', event.target.value)
+      this.inputValue = event.target.value;
+      this.$emit('input', event.target.value);
     }
   }
-}
+};
 </script>
